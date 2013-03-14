@@ -82,12 +82,12 @@ if (isset($_POST['action']) && isset($_POST['itemType']) && isset($_POST['itemSo
 
 			// setup the email
 			$subject = (string)$l->t('User %s shared a file with you', $user);
-			if ($type === 'dir') {
+			if ($type === 'folder') {
 				$subject = (string)$l->t('User %s shared a folder with you', $user);
 			}
 
 			$text = (string)$l->t('User %s shared the file "%s" with you. It is available for download here: %s', array($user, $file, $link));
-			if ($type === 'dir') {
+			if ($type === 'folder') {
 				$text = (string)$l->t('User %s shared the folder "%s" with you. It is available for download here: %s', array($user, $file, $link));
 			}
 
